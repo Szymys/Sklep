@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep</title>
+</head>
+<body>
+    <div>
+        <h1> WITAJ W SKLEPIE </h1>
+    </div>
+    <div style="clear:both" </div>
+
+    <div style="width:200px; float:left">
+        <h3> Kategorie: </h3>
+
+        {% for kat in kategoria %}
+
+            <p> <a href = "/kategoria/{{ kat.id }}"> {{ kat.nazwa }} </a> </p>
+
+        {% endfor %}
+    </div>
+
+    <div style="width=700; float:left">
+        {% block produkt %}     {% endblock produkt %}
+    </div>
+    <div style="clear:both"></div>
+
+</body>
+</html>
